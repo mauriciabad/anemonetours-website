@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tours Anemona</title>
+    <title>Anemona Tours </title>
     <meta name="description"
         content="Excursiones privadas de snorkeling con un guía local. Descubre la auténtica Costa Brava haciendo snorkel en sus mejores rincones acompañado de un local.">
 
@@ -18,7 +18,7 @@
         }
 
         body {
-            margin: 0;
+            margin: 0 auto;
             line-height: 1.6;
             color: #222;
             background-color: #fefefe;
@@ -29,6 +29,10 @@
             flex-direction: column;
             font-weight: 500;
             box-sizing: border-box;
+            background-color: #fafafa;
+            background-image: url('./img/bg.png');
+            background-repeat: repeat;
+            max-width: 800px;
         }
 
         .main {
@@ -55,13 +59,29 @@
         .tos-link {
             color: inherit;
         }
+
+        .logo {
+            margin: 0 auto;
+            padding: 0 4rem;
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 300px;
+            display: block;
+        }
+
+        h1,
+        p {
+            margin-top: 0;
+        }
     </style>
 
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Tours Anemona</h1>
+    <img src="./img/logo.svg" class="logo" alt="">
+
+    <h1>Anemona Tours </h1>
     <p>Excursiones privadas de snorkeling con un guía local.</p>
     <p>Descubre la auténtica Costa Brava haciendo snorkel en sus mejores rincones acompañado de un local.</p>
 
@@ -72,7 +92,7 @@
             class="instagram-link">@toursanemona</a>
     </main>
 
-    <div><a href="/tos" class="tos-link">Terminos de uso</a></div>
+    <div><a href="/tos" class="tos-link">Terminos del servicio</a></div>
 
     <script defer>
         const vh = window.innerHeight * 0.01;
