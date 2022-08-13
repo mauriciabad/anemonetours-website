@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <meta name="theme-color" content="#FF6099">
+
     <style>
         * {
             font-family: 'Quicksand', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -30,6 +32,10 @@
         }
 
         .logo {
+            margin: 1rem 0;
+        }
+
+        .logo__img {
             margin: 0 auto;
             padding: 0 4rem;
             box-sizing: border-box;
@@ -38,13 +44,38 @@
             display: block;
         }
 
-        h1,
+        .logo__text {
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
         p {
+            margin-top: 0;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 7vw, 3.5rem);
+            margin: 0;
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, calc(7vw * 0.75), 2rem);
+            margin: 1.5rem 0 0.5rem;
+        }
+
+        h1+*,
+        h2+* {
             margin-top: 0;
         }
 
         a {
             color: #FF6099;
+        }
+
+        .last-update {
+            font-style: italic;
+            color: #666;
         }
     </style>
 
@@ -52,14 +83,55 @@
 </head>
 
 <body>
-    <img src="./img/logo.svg" class="logo" alt="">
+    <div class="logo">
+        <img src="./img/logo.svg" class="logo__img" alt="">
+        <div class="logo__text">Anemona Tours</div>
+    </div>
 
     <h1>Terminos del servicio</h1>
+
+    <div class="last-update">Última actualización: 13 de Agosto de 2022</div>
+
+    <h2>Descrpción del servicio</h2>
     <ol>
-        <li>No nos responsabilizamos de posibles accidentes, aunque velaremos por tu bienestar.</li>
-        <li>El precio puede variar. Mayoritariamente en función de la demanda y disponibilidad horaria.</li>
+        <li>El servicio es una sesión de <b>snorkeling</b> guiada en grupo.</li>
+        <li>Los grupos son <b>de 2 a 6 personas</b>.</li>
+        <li>El precio es de <b>15 euros por persona</b>.</li>
+        <li>La duración de la sesión dependerá del grupo y no excederá <b>4 horas</b>.</li>
+        <li>La hora y dia de inicio estan sujetas a la disponibilidad del guia. Solo se hacen sesiones en <b>julio y
+                agosto</b>.</li>
+        <li>Se escojerá un <b>lugar y trayecto</b> en función de los <b>intereses,
+                necesidades y origen</b>
+            del grupo. El lugar debe estar en <b>Begur, Palafrugell, Mont-ras, Palamós</b>.</li>
+        <li>El <b>material no está incluido</b>. Se recomienda traer:</li>
+        <ul>
+            <li>Snorkel ("mascara y tubo")</li>
+            <li>Aletas ("patos")</li>
+            <li>Protección solar (crema solar o licra)</li>
+            <li>Escarpines y calzado cómodo</li>
+            <li>Toalla y bañador</li>
+            <li>Agua</li>
+        </ul>
+        <li>La sesión no se limita exclusivamente a hacer snorkeling, sino que tambien se pueden realizar <b>otras
+                actividades</b> función de los intereses del grupo. Algunos ejemplos son: pasear por el camino de ronda,
+            saltar
+            de rocas,
+            juegos aquaticos o contar anecdotas de la zona.</li>
+        <li>El <b>guia es Maurici Abad Gutierrez</b>, un chico de 24 años criado en Begur.</li>
+        <li>Se respetará el medio ambiente.</li>
+    </ol>
+
+    <h2>Descargo de responsabilidad</h2>
+    <ol>
+        <li>No nos responsabilizamos de posibles accidentes ni daños ocasionados. Cada uno es responsable de si mismo,
+            aunque el guia velará para que todo vaya bien.</li>
+        <li>El precio puede variar. Primordialmente debido a la demanda y disponibilidad del guia.</li>
         <li>Los pagos solo se aceptaran en efectivo o criptomonedas.</li>
     </ol>
+
+    <h2>¿Quienes somos?</h2>
+    <p>Anemona Tours es una entidad que ofrece tours de snorkeling entre Begur y Palamós.</p>
+    <p>Actualmente su único miembro es Maurici Abad Gutierrez.</p>
 
     <h2>Datos de contacto</h2>
     <ul>
