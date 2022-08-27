@@ -1,0 +1,48 @@
+body {
+  padding: 0 2rem;
+  text-align: center;
+  min-height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden-link {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: 2rem;
+  display: block;
+}
+
+.instagram-link {
+  display: block;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.tos-link {
+  color: inherit;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  margin: 0 auto;
+  padding: 0 4rem;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 300px;
+  display: block;
+}
+
+h1,
+p {
+  margin-top: 0;
+}

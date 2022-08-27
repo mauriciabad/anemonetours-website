@@ -1,0 +1,45 @@
+.logo {
+  margin: 1rem 0;
+  display: block;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.logo__img {
+  margin: 0 auto;
+  padding: 0 4rem;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 300px;
+  display: block;
+}
+
+.logo__text {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  margin: 0;
+}
+
+h2 {
+  font-size: clamp(1.5rem, calc(7vw * 0.75), 2rem);
+  margin: 1.5rem 0 0.5rem;
+}
+
+h1+*,
+h2+* {
+  margin-top: 0;
+}
+
+.last-update {
+  font-style: italic;
+  color: #666;
+}
