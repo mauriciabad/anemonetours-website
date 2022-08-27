@@ -5,13 +5,14 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  color: #fff;
 }
 
 .main {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -33,16 +34,173 @@ body {
   margin-bottom: 1rem;
 }
 
-.logo {
-  margin: 0 auto;
-  padding: 0 4rem;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 300px;
-  display: block;
-}
-
 h1,
 p {
   margin-top: 0;
+}
+
+#background-video {
+  position: fixed;
+  inset: 0;
+  object-fit: cover;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100vw;
+  object-position: 12.5% 50%;
+  z-index: -1;
+}
+
+.title {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2rem, 11vw, 3rem);
+  line-height: 1.1;
+  font-weight: bold;
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  --accent-color: rgb(16 68 117 / 35%);
+  text-shadow: 0 0.1em 0 var(--accent-color), -0.0707em 0.0707em 0 var(--accent-color),
+    0.0707em 0.0707em 0 var(--accent-color), 0.1em 0 0 var(--accent-color), -0.1em 0 0 var(--accent-color),
+    -0.0382em 0.0924em 0 var(--accent-color), 0.0382em 0.0924em 0 var(--accent-color),
+    -0.0923em 0.0383em 0 var(--accent-color), 0.0923em 0.0383em 0 var(--accent-color),
+    0 -0.1em 0 var(--accent-color), -0.0707em -0.0707em 0 var(--accent-color),
+    0.0707em -0.0707em 0 var(--accent-color), -0.0382em -0.0924em 0 var(--accent-color),
+    0.0382em -0.0924em 0 var(--accent-color), -0.0923em -0.0383em 0 var(--accent-color),
+    0.0923em -0.0383em 0 var(--accent-color);
+}
+
+.subtitle {
+  margin: 1rem 0 0;
+  font-size: 1.2rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  color: rgb(16 68 117);
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.button {
+  display: block;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem 1rem 1.5rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--accent-color);
+  font-size: clamp(1rem, 11vw, 1.5rem);
+  line-height: 1;
+  font-weight: bold;
+  border: solid 0.125rem currentColor;
+  letter-spacing: 0.1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  text-transform: uppercase;
+  font-family: var(--secondary-font);
+}
+
+.button > svg {
+  height: 1em;
+  vertical-align: -0.1em;
+  margin-right: 0.5rem;
+}
+
+.button--info {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* -------- Instagram widget -------*/
+.ig-widget {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 3fr;
+  grid-template-areas: "img title" "img username";
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 30rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  text-align: left;
+  font-size: clamp(1rem, 6vw, 2rem);
+  line-height: 0.8;
+  gap: 1rem;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  margin-bottom: 1rem;
+}
+.ig-widget__img {
+  width: 100%;
+  grid-area: img;
+  align-self: center;
+}
+.ig-widget__title {
+  grid-area: title;
+  align-self: end;
+  text-transform: uppercase;
+  color: #66696f;
+  font-weight: 500;
+  font-family: var(--secondary-font);
+}
+.ig-widget__username {
+  grid-area: username;
+  align-self: start;
+  text-decoration: underline;
+  color: #ff6099;
+  text-decoration-color: #ffc7db;
+}
+
+/* -------- Logo -------*/
+.logo {
+  margin: 1rem auto 0;
+  display: inline-block;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.logo__img {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 160px;
+  display: block;
+}
+
+.logo__text {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 0.8;
+  margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    margin: 1rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .logo__img {
+    padding: 0;
+    margin: 0;
+    width: 4rem;
+    max-width: unset;
+  }
+
+  .logo__text {
+    margin-left: 1rem;
+    text-align: left;
+    line-height: 1.2;
+    margin-top: 0;
+  }
 }
