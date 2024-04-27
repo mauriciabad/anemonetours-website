@@ -102,9 +102,11 @@ p {
     rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   text-transform: uppercase;
   font-family: var(--secondary-font);
+  margin: 0;
+  position: relative;
 }
 
-.button > svg {
+.button > .icon {
   height: 1em;
   vertical-align: -0.1em;
   margin-right: 0.5rem;
@@ -113,6 +115,22 @@ p {
 .button--info {
   background-color: var(--bg-color);
   color: var(--text-color);
+}
+
+.button--closed {
+  background-color: #8f6d62;
+  border-color: #614d45;
+}
+
+.rope {
+  position: absolute;
+  bottom: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20vw;
+  max-width: 10rem;
+  min-width: 5rem;
+  z-index: -1;
 }
 
 /* -------- Instagram widget -------*/
